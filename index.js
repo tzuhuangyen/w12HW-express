@@ -12,8 +12,8 @@ app.get("/greet", (req, res) => {
 
 //middleware
 // Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, "public")));
-
+// app.use(express.static(path.join(__dirname, "public")));
+app.use("/static", express.static("public"));
 //2.Create Basic Routes
 // app.get("/", (req, res) => {
 //   res.send("Welcome to my Express.js server!");
